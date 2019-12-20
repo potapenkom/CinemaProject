@@ -1,0 +1,29 @@
+﻿@using CinemaProject.Models
+@model IEnumerable<Studio>
+
+<div class="row d-flex justify-content-center">
+    <div class="col-10 mt-5">
+        <table class="table table-hover table-bg-light">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                </tr>
+            </thead>
+            @{
+                foreach (var studio in Model)
+                {
+
+                    <tbody>
+                        <tr>
+                            <th scope="row">@studio.Id</th>
+                            <td>@studio.Name</td>
+                        </tr>
+                    </tbody>
+                }
+            }
+        </table>
+    </div>
+</div>
+
+

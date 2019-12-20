@@ -1,0 +1,34 @@
+﻿@using CinemaProject.Models
+@model IEnumerable<Actor>
+
+<div class="row d-flex justify-content-center">
+    <div class="col-10 mt-5">
+        <table class="table table-hover table-bg-light">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Age</th>
+                </tr>
+            </thead>
+            @{
+                foreach (var actor in Model)
+                {
+
+                    <tbody>
+                        <tr>
+                            <th scope="row">@actor.Id</th>
+                            <td>@actor.FirstName</td>
+                            <td>@actor.LastName</td>
+                            <td>@actor.Age.ToString()</td>
+                        </tr>
+                    </tbody>
+                }
+            }
+        </table>
+    </div>
+</div>
+
+
+
