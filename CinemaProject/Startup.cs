@@ -42,12 +42,13 @@ namespace CinemaProject
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
-           // app.UseMvcWithDefaultRoute();
-            app.UseMvc(routes =>
+            app.UseRouting();
+            app.UseEndpoints(endpoints =>
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Actor}/{action=ActorList}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "Default",
+                    pattern: "{controller=Actor}/{action=ActorList}"
+                    );
             });
 
             using (var scope = app.ApplicationServices.CreateScope())
