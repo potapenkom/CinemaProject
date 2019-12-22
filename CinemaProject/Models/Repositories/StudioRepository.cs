@@ -16,7 +16,7 @@ namespace CinemaProject.Models.Repositories
             this.appDbContext = appDbContext;
         }
 
-        public IEnumerable<Studio> Studios => appDbContext.Studio;
+        public IEnumerable<Studio> Studios => appDbContext.Studio.Include(c => c.Movie);
 
         public Studio getStudio(int StudioId) => appDbContext.Studio.FirstOrDefault(p => p.Id == StudioId);
 

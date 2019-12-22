@@ -15,7 +15,7 @@ namespace CinemaProject.Models.Repositories
         {
             this.appDbContext = appDbContext;
         }
-        public IEnumerable<Actor> Actors => appDbContext.Actor;
+        public IEnumerable<Actor> Actors => appDbContext.Actor.Include(c => c.Movie);
 
         public Actor getActor(int ActorId) => appDbContext.Actor.FirstOrDefault(p => p.Id == ActorId);
     }

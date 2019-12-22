@@ -15,7 +15,7 @@ namespace CinemaProject.Models.Repositories
         {
             this.appDbContext = appDbContext;
         }
-        public IEnumerable<Director> Directors => appDbContext.Director;
+        public IEnumerable<Director> Directors => appDbContext.Director.Include(c => c.Movie);
 
         public Director getDirector(int DirectorId) => appDbContext.Director.FirstOrDefault(p => p.Id == DirectorId);
     }

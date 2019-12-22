@@ -11,5 +11,8 @@ namespace CinemaProject.Models
         public string Name { get; set; }
         public string Genre { get; set; }
         public int Year { get; set; }
+        public List<Actor> Actors { get; set; }
+        public List<Director> Directors { get; set; }
+        public List<Studio> Studios { get; set; }
     }
 }

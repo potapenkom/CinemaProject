@@ -43,6 +43,8 @@ namespace CinemaProject.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("MovieId");
+
                     b.ToTable("Actor");
                 });
 
@@ -66,6 +68,8 @@ namespace CinemaProject.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("MovieId");
 
                     b.ToTable("Director");
                 });
@@ -106,7 +110,36 @@ namespace CinemaProject.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("MovieId");
+
                     b.ToTable("Studio");
+                });
+
+            modelBuilder.Entity("CinemaProject.Models.Actor", b =>
+                {
+                    b.HasOne("CinemaProject.Models.Movie", "Movie")
+                        .WithMany("Actors")
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("CinemaProject.Models.Director", b =>
+                {
+                    b.HasOne("CinemaProject.Models.Movie", "Movie")
+                        .WithMany("Directors")
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("CinemaProject.Models.Studio", b =>
+                {
+                    b.HasOne("CinemaProject.Models.Movie", "Movie")
+                        .WithMany("Studios")
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

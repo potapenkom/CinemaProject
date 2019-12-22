@@ -14,5 +14,6 @@ namespace CinemaProject.Models
         public Gender Gender { get; set; }
         public int Age { get; set; }
         public int MovieId { get; set; }
+        public Movie Movie { get; set; }
     }
 }

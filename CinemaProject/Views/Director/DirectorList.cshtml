@@ -10,18 +10,19 @@
                         <th scope="col">First Name</th>
                         <th scope="col">Last Name</th>
                         <th scope="col">Birth Date</th>
+                        <th scope="col">Movie</th>
                     </tr>
                 </thead>
                 @{
                     foreach (var director in Model)
                     {
-
                         <tbody>
                             <tr>
                                 <th scope="row">@director.Id</th>
                                 <td>@director.FirstName</td>
                                 <td>@director.LastName</td>
                                 <td>@director.BirthDate</td>
+                                <td>@director.Movie.Name</td>
                             </tr>
                         </tbody>
                     }

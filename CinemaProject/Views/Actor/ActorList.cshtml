@@ -10,6 +10,7 @@
                     <th scope="col">First Name</th>
                     <th scope="col">Last Name</th>
                     <th scope="col">Age</th>
+                    <th scope="col">Movie</th>
                 </tr>
             </thead>
             @{
@@ -22,6 +23,7 @@
                             <td>@actor.FirstName</td>
                             <td>@actor.LastName</td>
                             <td>@actor.Age.ToString()</td>
+                            <td>@actor.Movie.Name</td>
                         </tr>
                     </tbody>
                 }
