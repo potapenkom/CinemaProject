@@ -1,32 +1,37 @@
 ﻿@using CinemaProject.Models
 @model IEnumerable<Director>
 
-    <div class="row d-flex justify-content-center">
-        <div class="col-10 mt-5">
-            <table class="table table-hover table-bg-light">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First Name</th>
-                        <th scope="col">Last Name</th>
-                        <th scope="col">Birth Date</th>
-                        <th scope="col">Movie</th>
-                    </tr>
-                </thead>
-                @{
-                    foreach (var director in Model)
-                    {
-                        <tbody>
-                            <tr>
-                                <th scope="row">@director.Id</th>
-                                <td>@director.FirstName</td>
-                                <td>@director.LastName</td>
-                                <td>@director.BirthDate</td>
-                                <td>@director.Movie.Name</td>
-                            </tr>
-                        </tbody>
-                    }
+@{
+    ViewBag.Title = "All Directors";
+}
+
+
+<div class="row d-flex justify-content-center">
+    <div class="col-10 mt-5">
+        <table class="table table-hover table-bg-light">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Birth Date</th>
+                    <th scope="col">Movie</th>
+                </tr>
+            </thead>
+            @{
+                foreach (var director in Model)
+                {
+                    <tbody>
+                        <tr>
+                            <th scope="row">@director.Id</th>
+                            <td>@director.FirstName</td>
+                            <td>@director.LastName</td>
+                            <td>@director.BirthDate</td>
+                            <td>@director.Movie.Name</td>
+                        </tr>
+                    </tbody>
                 }
-            </table>
-        </div>
+            }
+        </table>
     </div>
+</div>

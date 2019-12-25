@@ -16,6 +16,14 @@ namespace CinemaProject.Models
             if (!content.Actor.Any())
                 content.AddRange(
                     new Actor { FirstName = "Daniel", LastName = "Radcliffe", Gender = Gender.Male, Age = 30 , Movie = Movies["Harry Potter and the Deathly Hallows: Part 2"] },
+                    new Actor { FirstName = "Emma", LastName = "Watson", Gender = Gender.Female, Age = 29, Movie = Movies["Harry Potter and the Deathly Hallows: Part 2"] },
+                    new Actor { FirstName = "Anthony", LastName = "McMillan", Gender = Gender.Male, Age = 69, Movie = Movies["Harry Potter and the Deathly Hallows: Part 2"] },
+                    new Actor { FirstName = "Warwick", LastName = "Davis", Gender = Gender.Male, Age = 49, Movie = Movies["Harry Potter and the Deathly Hallows: Part 2"] },
+                    new Actor { FirstName = "Helena", LastName = "Carter", Gender = Gender.Female, Age = 53, Movie = Movies["Harry Potter and the Deathly Hallows: Part 2"] },
+                    new Actor { FirstName = "Javier", LastName = "Bardem", Gender = Gender.Male, Age = 50, Movie = Movies["Skyfall"] },
+                    new Actor { FirstName = "Naomie", LastName = "Harris ", Gender = Gender.Female, Age = 43, Movie = Movies["Skyfall"] },
+                    new Actor { FirstName = "Berenice", LastName = "Marlohe", Gender = Gender.Female, Age = 40, Movie = Movies["Skyfall"] },
+                    new Actor { FirstName = "Judi", LastName = "Dench", Gender = Gender.Female, Age = 85, Movie = Movies["Skyfall"] },
                     new Actor { FirstName = " Daniel", LastName = "Craig", Gender = Gender.Male, Age = 51, Movie = Movies["Skyfall"] }
                     );
             if (!content.Director.Any())
