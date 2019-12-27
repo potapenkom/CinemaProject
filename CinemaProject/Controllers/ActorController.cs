@@ -16,7 +16,20 @@ namespace CinemaProject.Controllers
             this.actors = actors;
         }
 
-        public  ViewResult ActorList()
+        public ViewResult MaleList()
+        {
+            var actor = actors.ActorMale;
+             return View(actor);
+        }
+
+        public ViewResult FemaleList()
+        {
+            var actor = actors.ActorFemale;
+            return View(actor);
+        }
+
+
+        public ViewResult ActorList()
         {
             var actor = actors.Actors;
             return View(actor);

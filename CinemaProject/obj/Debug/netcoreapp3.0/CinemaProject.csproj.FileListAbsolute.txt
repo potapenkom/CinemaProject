@@ -170,4 +170,6 @@ C:\Projects\CinemaProject\CinemaProject\obj\Debug\netcoreapp3.0\Razor\Views\Acto
 C:\Projects\CinemaProject\CinemaProject\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Projects\CinemaProject\CinemaProject\obj\Debug\netcoreapp3.0\Razor\Views\Studio\StudioList.cshtml.g.cs
 C:\Projects\CinemaProject\CinemaProject\obj\Debug\netcoreapp3.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Projects\CinemaProject\CinemaProject\obj\Debug\netcoreapp3.0\Razor\Views\Actor\MaleList.cshtml.g.cs
 C:\Projects\CinemaProject\CinemaProject\obj\Debug\netcoreapp3.0\CinemaProject.csprojAssemblyReference.cache
+C:\Projects\CinemaProject\CinemaProject\obj\Debug\netcoreapp3.0\Razor\Views\Actor\FemaleList.cshtml.g.cs
